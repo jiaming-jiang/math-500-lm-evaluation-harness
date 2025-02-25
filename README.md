@@ -41,6 +41,10 @@ python -m lm_eval \
 
 ```
 
+### Results
+
+You can find the evaluation results (sample output and logs) with gpt-4o in `results` folder.
+
 ## Cite as
 
 ```
