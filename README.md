@@ -1,3 +1,16 @@
+### Model Performance Comparison
+
+| Provider   | Model                  | Accuracy (%) |
+|------------|------------------------|--------------|
+| OpenAI     | o1-mini                | 90.0%        |
+|            | o1-preview              | 85.5%        |
+|            | o1                      | 94.8%        |
+| DeepSeek   | R1                      | 97.3%        |
+|            | V3                      | 90.2%        |
+| Kimi       | k1.5 short              | 94.6%        |
+|            | k1.5 long               | 96.2%        |
+| Anthropic  | Claude 3.7 sonnet       | 82.2%        |
+| Qwen       | QWQ-32B Preview         | 90.6%        |
 
 ### Install
 
@@ -7,6 +20,7 @@ To install the `lm-eval` package from the github repository, run:
 git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
 cd lm-evaluation-harness
 pip install -e .
+pip install -e ."[api]"
 ```
 
 ### User Guide
