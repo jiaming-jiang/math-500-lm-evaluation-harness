@@ -11,12 +11,10 @@ pip install -e .
 
 ### User Guide
 
-A user guide detailing the full list of supported arguments is provided [here](./docs/interface.md), and on the terminal by calling `lm_eval -h`. Alternatively, you can use `lm-eval` instead of `lm_eval`.
-
-
-To evaluate a model hosted on the [HuggingFace Hub](https://huggingface.co/models) (e.g. GPT-J-6B) on `hellaswag` you can use the following command (this assumes you are using a CUDA-compatible GPU):
+To evaluate a model using API on `math-500` you can use the following command :
 
 ```bash
+set OPENAI_API_KEY=YOUR_API_KEY
 python -m lm_eval \
     --model openai-chat-completions \
     --model_args model=gpt-4o,eos_string="</s>",max_length=2048,num_concurrent=5 \
@@ -25,8 +23,7 @@ python -m lm_eval \
     --num_fewshot 0 \
     --batch_size 1 \
     --log_samples \
-    --output_path ../results/math500_gpt4o_results.json \
-    2>&1 | tee ../results/math500_gpt4o_log.txt
+    --output_path ../results/math500_gpt4o_results
 
 ```
 
